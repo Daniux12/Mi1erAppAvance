@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    tools:ignore="ExtraText">
+
+    <!--Texto cuentanos sobre ti-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="415dp"
+        android:layout_height="90dp"
+        android:background="@color/damasco"
+        android:gravity="center"
+        android:text="Cuentanos sobre ti !"
+        android:textAlignment="center"
+        android:textAppearance="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtnombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <!--Ingreso del nombre que se enviara a la siguiente activity-->
+
+    <!--Registro de edad con teclado numerico-->
+
+    <!--Ingreso de calorias que consumirá con teclado numerico-->
+
+    <EditText
+        android:id="@+id/editnombre"
+        android:layout_width="225dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/damasco"
+        android:ems="10"
+        android:hint="Ingresa tu nombre"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtedad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942"
+        tools:ignore="Autofill,HardcodedText,LabelFor,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtnombre"
+        android:layout_width="108dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="17dp"
+        android:text="Nombre"
+        android:textAppearance="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editnombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.993"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/txtedad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Edad"
+        android:textAppearance="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editedad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <!--Radio boton para seleccionar si es hombre o mujer si selecciona masculino dira: bienvenido y si selecciona femenino dira: bienvenida-->
+
+    <EditText
+        android:id="@+id/editedad"
+        android:layout_width="225dp"
+        android:layout_height="45dp"
+        android:background="@color/damasco"
+        android:ems="10"
+        android:hint="Ingresa tu edad"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.424"
+        tools:ignore="Autofill,HardcodedText,LabelFor,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtgenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="284dp"
+        android:text="Género"
+        android:textAppearance="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editedad"
+        tools:ignore="HardcodedText" />
+
+    <!--Boton listo que envia al main activity-->
+
+    <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="128dp"
+        android:layout_height="95dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/ver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtgenero"
+        app:layout_constraintVertical_bias="0.166"
+        tools:ignore="UnknownId">
+
+        <RadioButton
+            android:id="@+id/rdbtnfem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femenino"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rdbtnmas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/listo"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="167dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="@color/piel"
+        android:text="   Listo   "
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupGender"
+        app:layout_constraintVertical_bias="0.361"
+        app:strokeColor="@color/damasco"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/irmenu"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="167dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="23dp"
+        android:backgroundTint="@color/piel"
+        android:text="   Menú   "
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.71"
+        app:layout_constraintStart_toEndOf="@+id/listo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.835"
+        app:strokeColor="@color/damasco" />
+
+    <Button
+        android:id="@+id/ver"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Ver"
+        android:backgroundTint="@color/piel"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtgenero"
+        app:layout_constraintVertical_bias="1.0"
+        app:strokeColor="@color/damasco" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
